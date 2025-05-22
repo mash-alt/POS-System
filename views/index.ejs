@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System - Product Lookup</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>POS System - Product Lookup</h1>
+        </header>
+        
+        <main>
+            <section class="barcode-scanner">
+                <h2>Scan or Enter Barcode</h2>
+                <form id="barcode-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="barcode-input" 
+                            placeholder="Enter barcode..." 
+                            autofocus
+                            autocomplete="off"
+                        >
+                        <button type="submit">Lookup</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="product-details" class="hidden">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img id="product-img" src="" alt="Product Image">
+                    </div>
+                    <div class="product-info">
+                        <h2 id="product-name"></h2>
+                        <p class="price">Price: $<span id="product-price"></span></p>
+                        <p class="barcode">Barcode: <span id="product-barcode"></span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="error-message" class="hidden">
+                <div class="error-card">
+                    <p>Product not found. Please try another barcode.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 POS System</p>
+        </footer>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
